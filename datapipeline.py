@@ -8,8 +8,8 @@ import json
 
 
 # Connect DB
-SOURCE_DB_URL = "postgresql://be_database_user:8ZB4313uq0T8vniaSJMsIoLw3aM5RqHu@dpg-d2lg9cndiees73c0qbrg-a.singapore-postgres.render.com/be_database"
-TARGET_DB_URL = "postgresql://be_database_user:8ZB4313uq0T8vniaSJMsIoLw3aM5RqHu@dpg-d2lg9cndiees73c0qbrg-a.singapore-postgres.render.com/datawarehouse"
+SOURCE_DB_URL = os.getenv("SOURCE_DB_URL")
+TARGET_DB_URL = os.getenv("TARGET_DB_URL")
 
 source_engine = create_engine(SOURCE_DB_URL)
 target_engine = create_engine(TARGET_DB_URL)
